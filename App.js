@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, StyleSheet, ScrollView } from "react-native";
 
-export default function App() {
+import NewApp from "./pages/NewApp";
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <View style={styles.container}>
+        <ScrollView>
+          <NewApp />
+        </ScrollView>
+      </View>
+    </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "lightblue",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
   },
 });
+
+export default App;
